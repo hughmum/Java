@@ -26,6 +26,19 @@ git commit -m "***"
 git push origin main
 ```
 
+### 如果是gitee平台
+
+```
+git remote add origin https://gitee.com/hughmum/body-test.git
+
+git clone 远程仓库地址
+例如 git clone  https://gitee.com/hughmum/physical-testing.git
+
+git add .
+git commit -m "***"
+git push origin master
+```
+
 
 
 
