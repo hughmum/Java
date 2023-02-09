@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b4b1941d-39b8-453f-8ccd-7013c06c28dd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="mybatis-mapper" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/Server/maven/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="E:\Server\maven\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="250AFjmrvqJxo77y45cKsW0x838" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA\workspace\mybatisplus\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.FastAutoGeneratorTest">
+    <configuration name="FastAutoGeneratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mybatisplus.FastAutoGeneratorTest" />
+      <module name="mybatisplus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.mybatisplus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisPlusEnumTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatisplus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.mybatisplus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.mybatisplus" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mybatisplus.MyBatisPlusEnumTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisPlusPluginsTest.testPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatisplus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.mybatisplus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.mybatisplus" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mybatisplus.MyBatisPlusPluginsTest" />
+      <option name="METHOD_NAME" value="testPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisPlusPluginsTest.testPageVo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatisplus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.mybatisplus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.mybatisplus" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mybatisplus.MyBatisPlusPluginsTest" />
+      <option name="METHOD_NAME" value="testPageVo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisPlusPluginsTest.testProduct01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatisplus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.mybatisplus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.mybatisplus" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mybatisplus.MyBatisPlusPluginsTest" />
+      <option name="METHOD_NAME" value="testProduct01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisplusApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mybatisplus" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.mybatisplus.MybatisplusApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.FastAutoGeneratorTest" />
+      <item itemvalue="JUnit.MyBatisPlusPluginsTest.testPage" />
+      <item itemvalue="JUnit.MyBatisPlusPluginsTest.testPageVo" />
+      <item itemvalue="JUnit.MyBatisPlusPluginsTest.testProduct01" />
+      <item itemvalue="JUnit.MyBatisPlusEnumTest.test" />
+      <item itemvalue="Spring Boot.MybatisplusApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FastAutoGeneratorTest" />
+        <item itemvalue="JUnit.MyBatisPlusEnumTest.test" />
+        <item itemvalue="JUnit.MyBatisPlusPluginsTest.testProduct01" />
+        <item itemvalue="JUnit.MyBatisPlusPluginsTest.testPageVo" />
+        <item itemvalue="JUnit.MyBatisPlusPluginsTest.testPage" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4b1941d-39b8-453f-8ccd-7013c06c28dd" name="Default Changelist" comment="" />
+      <created>1644653529078</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644653529078</updated>
+      <workItem from="1644653531692" duration="4952000" />
+      <workItem from="1644735973845" duration="17313000" />
+      <workItem from="1644807173125" duration="17004000" />
+      <workItem from="1644894733788" duration="12880000" />
+      <workItem from="1644917434376" duration="3000" />
+      <workItem from="1644917463008" duration="884000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1644912284115">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1644912284115" />
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser" timestamp="1644913243279">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1644913243279" />
+    <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1644907040980">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1644907040980" />
+    <state width="1323" height="31" key="GridCell.Tab.0.bottom" timestamp="1644917310882">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="31" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1644917310882" />
+    <state width="1323" height="31" key="GridCell.Tab.0.center" timestamp="1644917310882">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="31" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1644917310882" />
+    <state width="1323" height="31" key="GridCell.Tab.0.left" timestamp="1644917310881">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="31" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1644917310881" />
+    <state width="1323" height="31" key="GridCell.Tab.0.right" timestamp="1644917310882">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="31" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1644917310882" />
+    <state x="186" y="9" key="SettingsEditor" timestamp="1644653713451">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1644653713451" />
+    <state x="484" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1644655267920">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="484" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1644655267920" />
+    <state x="57" y="71" key="new project wizard" timestamp="1644917751882">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="57" y="71" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1644917751882" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1644813202516">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1644813202516" />
+  </component>
+</project>

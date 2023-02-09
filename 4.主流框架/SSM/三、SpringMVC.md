@@ -40,9 +40,7 @@ WebWork、Strust2 等诸多产品的历代更迭之后，目前业界普遍选�
 ## 1.3、SpringMVC的特点
 
 - **Spring** **家族原生产品**，与 IOC 容器等基础设施无缝对接
-- **基于原生的Servlet**，通过了功能强大的**前端控制器DispatcherServlet**，对请求和响应进行统一
-
-处理
+- **基于原生的Servlet**，通过了功能强大的**前端控制器DispatcherServlet**，对请求和响应进行统一处理
 
 - 表述层各细分领域需要解决的问题**全方位覆盖**，提供**全面解决方案**
 - **代码清新简洁**，大幅度提升开发效率
@@ -186,9 +184,7 @@ SpringMVC前端控制器DispatcherServlet的初始化时间
 
 ## 2.4、创建请求控制器
 
-由于前端控制器对浏览器发送的请求进行了统一的处理，但是具体的请求有不同的处理过程，因此需要创建处理具体请求的类，即请求控制器
-
-请求控制器中每一个处理请求的方法成为控制器方法
+由于前端控制器对浏览器发送的请求进行了统一的处理，但是具体的请求有不同的处理过程，因此需要创建处理具体请求的类，即请求控制器请求控制器中每一个处理请求的方法成为控制器方法
 
 因为SpringMVC的控制器由一个POJO（普通的Java类）担任，因此需要通过@Controller注解将其标识为一个控制层组件，交给Spring的IoC容器管理，此时SpringMVC才能够识别控制器的存在
 
@@ -293,9 +289,7 @@ public String HelloWorld() {
 
 ## 2.7、总结
 
-浏览器发送请求，若请求地址符合前端控制器的url-pattern，该请求就会被前端控制器DispatcherServlet处理。前端控制器会读取SpringMVC的核心配置文件，通过扫描组件找到控制器，
-
-将请求地址和控制器中@RequestMapping注解的value属性值进行匹配，若匹配成功，该注解所标识的控制器方法就是处理请求的方法。处理请求的方法需要返回一个字符串类型的视图名称，该视图名称会被视图解析器解析，加上前缀和后缀组成视图的路径，通过Thymeleaf对视图进行渲染，最终转发到视图所对应页面
+浏览器发送请求，若请求地址符合前端控制器的url-pattern，该请求就会被前端控制器DispatcherServlet处理。前端控制器会读取SpringMVC的核心配置文件，通过扫描组件找到控制器，将请求地址和控制器中@RequestMapping注解的value属性值进行匹配，若匹配成功，该注解所标识的控制器方法就是处理请求的方法。处理请求的方法需要返回一个字符串类型的视图名称，该视图名称会被视图解析器解析，加上前缀和后缀组成视图的路径，通过Thymeleaf对视图进行渲染，最终转发到视图所对应页面
 
 # 3、@RequestMapping注解
 
@@ -787,9 +781,7 @@ public String testRedirect(){
 
 ## 6.4、视图控制器view-controller
 
-当控制器方法中，仅仅用来实现页面跳转，即只需要设置视图名称时，可以将处理器方法使用view
-
-controller标签进行表示
+当控制器方法中，**仅仅用来实现页面跳转**，即只需要设置视图名称时，可以将处理器方法使用view-controller标签进行表示
 
 ```xml
 <!--
@@ -801,9 +793,7 @@ controller标签进行表示
 
 > 注：
 >
-> 当SpringMVC中设置任何一个view-controller时，其他控制器中的请求映射将全部失效，此时需
->
-> 要在SpringMVC的核心配置文件中设置开启mvc注解驱动的标签：
+> 当SpringMVC中设置任何一个view-controller时，其他控制器中的请求映射将全部失效，此时需要在SpringMVC的核心配置文件中设置开启mvc注解驱动的标签：
 >
 > <mvc:annotation-driven />
 
@@ -811,23 +801,19 @@ controller标签进行表示
 
 ## 7.1、RESTful简介
 
-REST：**Re**presentational **S**tate **T**ransfer，表现层资源状态转移。
+**<font color='red'>REST：Representational State Transfer，表现层资源状态转移</font>**。
 
 ### ①资源
 
-资源是一种看待服务器的方式，即，将服务器看作是由很多离散的资源组成。每个资源是服务器上一个可命名的抽象概念。因为资源是一个抽象的概念，所以它不仅仅能代表服务器文件系统中的一个文件、数据库中的一张表等等具体的东西，可以将资源设计的要多抽象有多抽象，只要想象力允许而且客户端应用开发者能够理解。与面向对象设计类似，资源是以名词为核心来组织的，首先关注的是名词。一个资源可以由一个或多个URI来标识。URI既是资源的名称，也是资源在Web上的地址。对某个资源感兴趣的客户端应用，可以通过资源的URI与其进行交互。
+资源是一种看待服务器的方式，即，将服务器看作是由很多离散的资源组成。每个资源是服务器上一个可命名的抽象概念。因为资源是一个抽象的概念，所以它不仅仅能代表服务器 文件系统中的一个文件、数据库中的一张表等等具体的东西，可以将资源设计的要多抽象有多抽象，只要想象力允许而且客户端应用开发者能够理解。与面向对象设计类似，资源是以名词为核心来组织的，首先关注的是名词。一个资源可以由一个或多个URI来标识。URI既是资源的名称，也是资源在Web上的地址。对某个资源感兴趣的客户端应用，可以通过资源的URI与其进行交互。
 
 ### ②资源的表述
 
-资源的表述是一段对于资源在某个特定时刻的状态的描述。可以在客户端-服务器端之间转移（交
-
-换）。资源的表述可以有多种格式，例如HTML/XML/JSON/纯文本/图片/视频/音频等等。资源的表述格式可以通过协商机制来确定。请求-响应方向的表述通常使用不同的格式。
+资源的表述是一段对于资源在某个特定时刻的状态的描述。可以在客户端-服务器端之间转移（交换）。资源的表述可以有多种格式，例如HTML/XML/JSON/纯文本/图片/视频/音频等等。资源的表述格式可以通过协商机制来确 定。请求-响应方向的表述通常使用不同的格式。
 
 ### ③状态转移
 
-状态转移说的是：在客户端和服务器端之间转移（transfer）代表资源状态的表述。通过转移和操作资
-
-源的表述，来间接实现操作资源的目的。
+状态转移说的是：在客户端和服务器端之间转移（transfer）代表资源状态的表述。通过转移和操作资源的表述，来间接实现操作资源的目的。
 
 ## 7.2、RESTful的实现
 
@@ -877,9 +863,7 @@ _method的值，因此请求参数_method的值才是最终的请求方式
 
 > 注：
 >
-> 目前为止，SpringMVC中提供了两个过滤器：CharacterEncodingFilter和
->
-> HiddenHttpMethodFilter
+> 目前为止，SpringMVC中提供了两个过滤器：CharacterEncodingFilter和HiddenHttpMethodFilter
 >
 > 在web.xml中注册时，必须先注册CharacterEncodingFilter，再注册HiddenHttpMethodFilter
 >
@@ -890,10 +874,10 @@ _method的值，因此请求参数_method的值才是最终的请求方式
 > 符集的
 >
 > - request.setCharacterEncoding(encoding) 方法要求前面不能有任何获取请求参数的操作
-> - 而 HiddenHttpMethodFilter 恰恰有一个获取请求方式的操作：
->
+>- 而 HiddenHttpMethodFilter 恰恰有一个获取请求方式的操作：
+> 
 > - ```java
->   String paramValue = request.getParameter(this.methodParam);
+>  String paramValue = request.getParameter(this.methodParam);
 >   ```
 
 # 8、RESTful案例
@@ -1445,7 +1429,7 @@ public User testResponseBody(){
 
 ## 10.1、文件下载
 
-ResponseEntity用于控制器方法的返回值类型，该控制器方法的返回值就是响应到浏览器的响应报文
+<font color='red'>ResponseEntity用于控制器方法的返回值类型，该控制器方法的返回值就是响应到浏览器的响应报文</font>
 
 使用ResponseEntity实现下载文件的功能
 
@@ -1459,7 +1443,7 @@ public ResponseEntity<byte[]> testResponseEntity(HttpSession session) throws
     String realPath = servletContext.getRealPath("/static/img/1.jpg");
     //创建输入流
     InputStream is = new FileInputStream(realPath);
-    //创建字节数组
+    //创建字节数组  is.available()获取输入流所对应文件的字节数
     byte[] bytes = new byte[is.available()];
     //将流读到字节数组中
     is.read(bytes);
@@ -1483,6 +1467,15 @@ public ResponseEntity<byte[]> testResponseEntity(HttpSession session) throws
 
 SpringMVC中将上传的文件封装到MultipartFile对象中，通过此对象可以获取文件相关信息
 
+```vue
+<form :th:action="@{/test/up}" method="post" enctype="multipart/form-data">
+    头像:<input type="file" name="photo"><br>
+    <input type="submit" value="上传">
+</form>
+```
+
+
+
 上传步骤：
 
 ### ①添加依赖：
@@ -1496,7 +1489,9 @@ SpringMVC中将上传的文件封装到MultipartFile对象中，通过此对象�
 </dependency>
 ```
 
-### ②在SpringMVC的配置文件中添加配置：
+### ②在SpringMVC的配置文件中添加配置： 
+
+**<font color='DodgerBlue'>文件上传解析器</font>**
 
 ```xml
 <!--必须通过文件解析器的解析才能将文件转换为MultipartFile对象-->
@@ -1533,7 +1528,7 @@ public String testUp(MultipartFile photo, HttpSession session) throws IOExceptio
 
 ## 11.1、拦截器的配置
 
-SpringMVC中的拦截器用于拦截控制器方法的执行
+<font color='DodgerBlue'>SpringMVC中的拦截器用于拦截控制器方法的执行</font>
 
 SpringMVC中的拦截器需要实现HandlerInterceptor
 
@@ -1584,9 +1579,7 @@ preHandle()返回false和它之前的拦截器的preHandle()都会执行，postH
 
 SpringMVC提供了一个处理控制器方法执行过程中所出现的异常的接口：HandlerExceptionResolver
 
-HandlerExceptionResolver接口的实现类有：DefaultHandlerExceptionResolver和
-
-SimpleMappingExceptionResolver
+HandlerExceptionResolver接口的实现类有：DefaultHandlerExceptionResolver和SimpleMappingExceptionResolver
 
 SpringMVC提供了自定义的异常处理器SimpleMappingExceptionResolver，使用方式：
 
@@ -1609,7 +1602,7 @@ SpringMVC提供了自定义的异常处理器SimpleMappingExceptionResolver，�
 </bean>
 ```
 
-## 12.2、基于注解的异常处理
+## 12.2、基于注解的异常处理 
 
 ```java
 //@ControllerAdvice将当前类标识为异常处理的组件
@@ -1631,17 +1624,7 @@ public class ExceptionController {
 
 ## 13.1、创建初始化类，代替web.xml
 
-在Servlet3.0环境中，容器会在类路径中查找实现javax.servlet.ServletContainerInitializer接口的类，
-
-如果找到的话就用它来配置Servlet容器。 Spring提供了这个接口的实现，名为
-
-SpringServletContainerInitializer，这个类反过来又会查找实现WebApplicationInitializer的类并将配
-
-置的任务交给它们来完成。Spring3.2引入了一个便利的WebApplicationInitializer基础实现，名为
-
-AbstractAnnotationConfigDispatcherServletInitializer，当我们的类扩展了
-
-AbstractAnnotationConfigDispatcherServletInitializer并将其部署到Servlet3.0容器的时候，容器会自动发现它，并用它来配置Servlet上下文。
+在Servlet3.0环境中，容器会在类路径中查找实现javax.servlet.ServletContainerInitializer接口的类，如果找到的话就用它来配置Servlet容器。 Spring提供了这个接口的实现，名为SpringServletContainerInitializer，这个类反过来又会查找实现WebApplicationInitializer的类并将配置的任务交给它们来完成。Spring3.2引入了一个便利的WebApplicationInitializer基础实现，名为AbstractAnnotationConfigDispatcherServletInitializer，当我们的类扩展了AbstractAnnotationConfigDispatcherServletInitializer并将其部署到Servlet3.0容器的时候，容器会自动发现它，并用它来配置Servlet上下文。
 
 ```java
 public class WebInit extends
@@ -1780,31 +1763,17 @@ public String index(){
 
 ## 14.1、SpringMVC常用组件
 
-- DispatcherServlet：**前端控制器**，不需要工程师开发，由框架提供
+- DispatcherServlet：**<font color='red'>前端控制器</font>**，不需要工程师开发，由框架提供作用：<font color='red'>统一处理请求和响应</font>，整个流程控制的中心，由它调用其它组件处理用户的请求
 
-作用：统一处理请求和响应，整个流程控制的中心，由它调用其它组件处理用户的请求
+- HandlerMapping：**<font color='DodgerBlue'>处理器映射器</font>**，不需要工程师开发，由框架提供作用：根据请求的url、method等信息查找Handler，即控制器方法
 
-- HandlerMapping：**处理器映射器**，不需要工程师开发，由框架提供
+- Handler：**处理器**，需要工程师开发作用：在DispatcherServlet的控制下Handler对具体的用户请求进行处理
 
-作用：根据请求的url、method等信息查找Handler，即控制器方法
+- HandlerAdapter：**处理器适配器**，不需要工程师开发，由框架提供作用：通过HandlerAdapter对处理器（控制器方法）进行执行
 
-- Handler：**处理器**，需要工程师开发
+- ViewResolver：**视图解析器**，不需要工程师开发，由框架提供作用：进行视图解析，得到相应的视图，例如：ThymeleafView、InternalResourceView、RedirectView
 
-作用：在DispatcherServlet的控制下Handler对具体的用户请求进行处理
-
-- HandlerAdapter：**处理器适配器**，不需要工程师开发，由框架提供
-
-作用：通过HandlerAdapter对处理器（控制器方法）进行执行
-
-- ViewResolver：**视图解析器**，不需要工程师开发，由框架提供
-
-作用：进行视图解析，得到相应的视图，例如：ThymeleafView、InternalResourceView、
-
-RedirectView
-
-- View：**视图**
-
-作用：将模型数据通过页面展示给用户
+- View：**视图**作用：将模型数据通过页面展示给用户
 
 ## 14.2、DispatcherServlet初始化过程
 
@@ -1923,9 +1892,7 @@ protected void initStrategies(ApplicationContext context) {
 
 ### ①processRequest()
 
-FrameworkServlet重写HttpServlet中的service()和doXxx()，这些方法中调用了
-
-processRequest(request, response)
+FrameworkServlet重写HttpServlet中的service()和doXxx()，这些方法中调用了processRequest(request, response)
 
 所在类：org.springframework.web.servlet.FrameworkServlet
 
@@ -2179,13 +2146,13 @@ iii. 如果有配置，则访问目标资源（一般为静态资源，如：JS,
 
 b) 存在则执行下面的流程
 
-\3) 根据该URI，调用HandlerMapping获得该Handler配置的所有相关的对象（包括Handler对象以及
+\3) 根据该URI，<font color='DodgerBlue'>调用HandlerMapping获得该Handler配置的所有相关的对象</font>（包括Handler对象以及
 
 Handler对象对应的拦截器），最后以HandlerExecutionChain执行链对象的形式返回。
 
 \4) DispatcherServlet 根据获得的Handler，选择一个合适的HandlerAdapter。
 
-\5) 如果成功获得HandlerAdapter，此时将开始执行拦截器的preHandler(…)方法【正向】
+\5) 如果<font color='DodgerBlue'>成功获得HandlerAdapter，此时将开始执行拦截器的preHandler(…)方法</font>【正向】
 
 \6) 提取Request中的模型数据，填充Handler入参，开始执行Handler（Controller)方法，处理请求。
 
@@ -2217,13 +2184,9 @@ HandlerExceptionResolver进行异常处理）选择一个适合的ViewResolver�
 
 # 四、SSM整合
 
-4.1、ContextLoaderListener
+## 4.1、ContextLoaderListener
 
-Spring提供了监听器ContextLoaderListener，实现ServletContextListener接口，可监听
-
-ServletContext的状态，在web服务器的启动，读取Spring的配置文件，创建Spring的IOC容器。web
-
-应用中必须在web.xml中配置
+Spring提供了监听器ContextLoaderListener，实现ServletContextListener接口，可监听ServletContext的状态，在web服务器的启动，读取Spring的配置文件，创建Spring的IOC容器。web应用中必须在web.xml中配置
 
 ```xml
 <listener>
@@ -2440,7 +2403,7 @@ CREATE TABLE `t_emp` (
 </context:component-scan>
 <!--配置视图解析器-->
 <bean id="viewResolver"
-      class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
+      class="org.thymeleaf.spring5.view.T hymeleafViewResolver">
     <property name="order" value="1"/>
     <property name="characterEncoding" value="UTF-8"/>
     <property name="templateEngine">

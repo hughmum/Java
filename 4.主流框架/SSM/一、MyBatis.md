@@ -1067,7 +1067,7 @@ List<Emp> getEmpListByDid(@Param("did") int did);
 ## 9.5、foreach
 
 ```xml
-<!--int insertMoreEmp(List<Emp> emps);-->
+<!--int insertMoreEmp(List<Emp> emps);-->    加一个@Param("emps") 注解
 <insert id="insertMoreEmp">
 	insert into t_emp values
 	<foreach collection="emps" item="emp" separator=",">
@@ -1169,15 +1169,15 @@ false。
 
 ## 10.4、MyBatis缓存查询的顺序
 
-先查询二级缓存，因为二级缓存中可能会有其他程序已经查出来的数据，可以拿来直接使用。
+$\textcolor{Red}{先查询二级缓存，因为二级缓存中可能会有其他程序已经查出来的数据，可以拿来直接使用。}$
 
-如果二级缓存没有命中，再查询一级缓存
+<font color='blue'>如果二级缓存没有命中，再查询一级缓存</font>
 
 如果一级缓存也没有命中，则查询数据库
 
-SqlSession关闭之后，一级缓存中的数据会写入二级缓存
+<font color='RoyalBlue'>SqlSession关闭之后，一级缓存中的数据会写入二级缓存</font>
 
-## 10.5、整合第三方缓存EHCache
+## 10.5、整合<font color='RoyalBlue'>第三方</font>缓存EHCache
 
 ### 10.5.1、添加依赖
 
@@ -1535,4 +1535,6 @@ c>分页相关数据
 >
 > navigatePages：导航分页的页码数
 >
-> navigatepageNums：导航分页的页码，[1,2,3,4,5]
+> navigatepageNums：导航分页的页码，[1,2,3,4,5、
+>
+> 

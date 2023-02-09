@@ -30,7 +30,7 @@
 
 Spring 基础框架，可以视为 Spring 基础设施，基本上任何其他 Spring 项目都是以 Spring Framework为基础的。
 
-#### 1.3.1、Spring Framework特性
+#### 1.3.1、:star:Spring Framework特性
 
 - 非侵入式：使用 Spring Framework 开发应用程序时，Spring 对应用程序本身的结构影响非常
 
@@ -40,7 +40,7 @@ Spring 基础框架，可以视为 Spring 基础设施，基本上任何其他 S
 
 时结构清晰、简洁优雅。
 
-- 控制反转：IOC——Inversion of Control，翻转资源获取方向。把自己创建资源、向环境索取资源
+- <font color='blue'>**控制反转**</font>：IOC——Inversion of Control，翻转资源获取方向。把自己创建资源、向环境索取资源
 
 变成环境将资源准备好，我们享受资源注入。
 
@@ -62,7 +62,7 @@ Spring 基础框架，可以视为 Spring 基础设施，基本上任何其他 S
 
 - 声明式：很多以前需要编写代码才能实现的功能，现在只需要声明需求即可由框架代为实现。
 
-- 一站式：在 IOC 和 AOP 的基础上可以整合各种企业应用的开源框架和优秀的第三方类库。而且
+- 一站式：在 IOC 和 AOP 的基础上可以整合各种企 业应用的开源框架和优秀的第三方类库。而且
 
 Spring 旗下的项目已经覆盖了广泛领域，很多方面的功能性需求可以在 Spring Framework 的基
 
@@ -78,7 +78,7 @@ Spring 旗下的项目已经覆盖了广泛领域，很多方面的功能性需�
 | Data Access/Integration | 提供了对数据访问/集成的功能。                               |
 | Spring MVC              | 提供了面向Web应用程序的集成功能。                           |
 
-# 2、IOC
+# 2、:rocket: <font color='DodgerBlue'>IOC</font>
 
 ## 2.1、IOC容器
 
@@ -98,15 +98,15 @@ IOC：Inversion of Control，翻译过来是**反转控制**。
 
 点外卖：下单、等、吃，省时省力，不必关心资源创建过程的所有细节。
 
-反转控制的思想完全颠覆了应用程序组件获取资源的传统方式：反转了资源的获取方向——改由容器主动的将资源推送给需要的组件，开发人员不需要知道容器是如何创建资源对象的，只需要提供接收资源的方式即可，极大的降低了学习成本，提高了开发的效率。这种行为也称为查找的**被动**形式。
+反转控制的思想完全颠覆了应用程序组件获取资源的传统方式：反转了资源的获取方向——<font color='DodgerBlue'>改由容器主动的将资源推送给需要的组件</font>，开发人员不需要知道容器是如何创建资源对象的，只需要提供接收资源的方式即可，极大的降低了学习成本，提高了开发的效率。这种行为也称为查找的**被动**形式。
 
-#### ③DI
+#### ③:star: DI
 
 DI：Dependency Injection，翻译过来是**依赖注入**。
 
-DI 是 IOC 的另一种表述方式：即组件以一些预先定义好的方式（例如：setter 方法）接受来自于容器
+DI 是 IOC 的另一种表述方式：**<font color='DodgerBlue'>即组件以一些预先定义好的方式（例如：setter 方法）接受来自于容器</font>**
 
-的资源注入。相对于IOC而言，这种表述更直接。
+**<font color='DodgerBlue'>的资源注入</font>**。相对于IOC而言，这种表述更直接。
 
 所以结论是：IOC 就是一种反转控制的思想， 而 DI 是对 IOC 的一种具体实现。
 
@@ -118,7 +118,7 @@ Spring 的 IOC 容器就是 IOC 思想的一个落地的产品实现。IOC 容�
 
 这是 IOC 容器的基本实现，是 Spring 内部使用的接口。面向 Spring 本身，不提供给开发人员使用。
 
-#### ②ApplicationContext
+#### ②<font color='DodgerBlue'>ApplicationContext</font>
 
 BeanFactory 的子接口，提供了更多高级特性。面向 Spring 的使用者，几乎所有场合都使用
 
@@ -128,12 +128,12 @@ ApplicationContext 而不是底层的 BeanFactory。
 
 ![5](img\5.png)
 
-| **类型名**                      | **简介**                                                     |
-| ------------------------------- | ------------------------------------------------------------ |
-| ClassPathXmlApplicationContext  | 通过读取类路径下的 XML 格式的配置文件创建 IOC 容器对象       |
-| FileSystemXmlApplicationContext | 通过文件系统路径读取 XML 格式的配置文件创建 IOC 容器对象     |
-| ConfigurableApplicationContext  | ApplicationContext 的子接口，包含一些扩展方法refresh() 和 close() ，让 ApplicationContext 具有启动、关闭和刷新上下文的能力。 |
-| WebApplicationContext           | 专门为 Web 应用准备，基于 Web 环境创建 IOC 容器对象，并将对象引入存入 ServletContext 域中。 |
+| **类型名**                                              | **简介**                                                     |
+| ------------------------------------------------------- | ------------------------------------------------------------ |
+| <font color='red'>ClassPathXmlApplicationContext</font> | 通过读取类路径下的 XML 格式的配置文件创建 IOC 容器对象       |
+| FileSystemXmlApplicationContext                         | 通过文件系统路径读取 XML 格式的配置文件创建 IOC 容器对象     |
+| ConfigurableApplicationContext                          | ApplicationContext 的子接口，包含一些扩展方法refresh() 和 close() ，让 ApplicationContext 具有启动、关闭和刷新上下文的能力。 |
+| WebApplicationContext                                   | 专门为 Web 应用准备，基于 Web 环境创建 IOC 容器对象，并将对象引入存入 ServletContext 域中。 |
 
 ## 2.2、基于XML管理bean
 
@@ -253,7 +253,7 @@ public void testHelloWorld(){
 
 #### ④注意
 
-当根据类型获取bean时，要求IOC容器中指定类型的bean有且只能有一个
+<font color='red'>当根据类型获取bean时，要求IOC容器中指定类型的bean有且只能有一个</font>
 
 当IOC容器中一共配置了两个：
 
@@ -274,7 +274,7 @@ public void testHelloWorld(){
 
 如果组件类实现了接口，根据接口类型可以获取 bean 吗？
 
-> 可以，前提是bean唯一
+> <font color='DodgerBlue'>可以，前提是bean唯一</font>
 
 如果一个接口有多个实现类，这些实现类都配置了 bean，根据接口类型可以获取 bean 吗？
 
@@ -436,7 +436,7 @@ public void testDIBySet(){
 > <property name="name" value="null"></property>
 > ```
 >
-> 以上写法，为name所赋的值是字符串null
+> <font color='red'>以上写法，为name所赋的值是字符串null</font>
 
 #### ③xml实体
 
@@ -1099,13 +1099,9 @@ public class MyBeanProcessor implements BeanPostProcessor {
 
 #### ①简介
 
-FactoryBean是Spring提供的一种整合第三方框架的常用机制。和普通的bean不同，配置一个
+FactoryBean是Spring提供的一种整合第三方框架的常用机制。和普通的bean不同，配<font color='DodgerBlue'>置一个FactoryBean类型的bean，在获取bean的时候得到的并不是class属性中配置的这个类的对象，而是getObject()方法的返回值。通过这种机制</font>，Spring可以帮我们把复杂组件创建的详细过程和繁琐细节都屏蔽起来，只把最简洁的使用界面展示给我们。
 
-FactoryBean类型的bean，在获取bean的时候得到的并不是class属性中配置的这个类的对象，而是
-
-getObject()方法的返回值。通过这种机制，Spring可以帮我们把复杂组件创建的详细过程和繁琐细节都屏蔽起来，只把最简洁的使用界面展示给我们。
-
-将来我们整合Mybatis时，Spring就是通过FactoryBean机制来帮我们创建SqlSessionFactory对象的。
+将来我们<font color='red'>整合Mybatis时，Spring就是通过FactoryBean机制来帮我们创建SqlSessionFactory对象的</font>。
 
 ```java
 /*
@@ -1296,13 +1292,11 @@ public void testUserFactoryBean(){
 }
 ```
 
-#### 2.2.14、实验十四：基于xml的自动装配
+#### 2.2.14、:star: 实验十四：基于xml的自动装配
 
 > 自动装配：
 >
-> 根据指定的策略，在IOC容器中匹配某一个bean，自动为指定的bean中所依赖的类类型或接口类
->
-> 型属性赋值
+> <font color='red'>根据指定的策略，在IOC容器中匹配某一个bean，自动为指定的bean中所依赖的类类型或接口类型属性赋值</font>
 
 #### ①场景模拟
 
@@ -1368,11 +1362,9 @@ public class UserDaoImpl implements UserDao {
 >
 > 自动装配方式：byType
 >
-> byType：根据类型匹配IOC容器中的某个兼容类型的bean，为属性自动赋值
+> byType：<font color='red'>根据类型匹配IOC容器中的某个兼容类型的bean，为属性自动赋值</font>
 >
-> 若在IOC中，没有任何一个兼容类型的bean能够为属性赋值，则该属性不装配，即值为默认值
->
-> null
+> 若在IOC中，没有任何一个兼容类型的bean能够为属性赋值，则该属性不装配，即值为默认值null
 >
 > 若在IOC中，有多个兼容类型的bean能够为属性赋值，则抛出异常
 >
@@ -1388,7 +1380,7 @@ public class UserDaoImpl implements UserDao {
 
 > 自动装配方式：byName
 >
-> byName：将自动装配的属性的属性名，作为bean的id在IOC容器中匹配相对应的bean进行赋值
+> <font color='red'>byName：将自动装配的属性的属性名，作为bean的id在IOC容器中匹配相对应的bean进行赋值</font>
 
 ```xml
 <bean id="userController"class="com.atguigu.autowire.xml.controller.UserController" autowire="byName">
@@ -1420,9 +1412,7 @@ public void testAutoWireByXML(){
 
 #### ①注解
 
-和 XML 配置文件一样，注解本身并不能执行，注解本身仅仅只是做一个标记，具体的功能是框架检测
-
-到注解标记的位置，然后针对这个位置按照注解标记的功能来执行具体操作。
+<font color='DodgerBlue'>和 XML 配置文件一样，注解本身并不能执行，注解本身仅仅只是做一个标记，具体的功能是框架检测到注解标记的位置，然后针对这个位置按照注解标记的功能来执行具体操作。</font>
 
 本质上：所有一切的操作都是Java代码来完成的，XML和注解只是告诉框架中的Java代码如何执行。
 
@@ -1462,9 +1452,13 @@ Spring 为了知道程序员在哪些地方标记了什么注解，就需要通�
 
 #### ⑤标识组件的常用注解
 
-> @Component：将类标识为普通组件 @Controller：将类标识为控制层组件 @Service：将类标
+> @Component：将类标识为普通组件 
 >
-> 识为业务层组件 @Repository：将类标识为持久层组件
+> @Controller：将类标识为控制层组件
+>
+> @Service：将类标识为业务层组件 
+>
+> <font color='DodgerBlue'>@Repository：将类标识为持久层组件</font>
 
 问：以上四个注解有什么关系和区别？
 
@@ -1472,9 +1466,7 @@ Spring 为了知道程序员在哪些地方标记了什么注解，就需要通�
 
 通过查看源码我们得知，@Controller、@Service、@Repository这三个注解只是在@Component注解的基础上起了三个新的名字。
 
-对于Spring使用IOC容器管理这些组件来说没有区别。所以@Controller、@Service、@Repository这
-
-三个注解只是给开发人员看的，让我们能够便于分辨组件的作用。
+对于Spring使用IOC容器管理这些组件来说没有区别。所以@Controller、@Service、@Repository这三个注解只是给开发人员看的，让我们能够便于分辨组件的作用。
 
 注意：虽然它们本质上一样，但是为了代码的可读性，为了程序结构严谨我们肯定不能随便胡乱标记。
 
@@ -1579,11 +1571,9 @@ public void testAutowireByAnnotation(){
 
 在我们使用XML方式管理bean的时候，每个bean都有一个唯一标识，便于在其他地方引用。现在使用
 
-注解后，每个组件仍然应该有一个唯一标识。
+注解后，每个组件仍然应该有一个唯一标识。  （注解+扫描）
 
-> 默认情况
->
-> 类名首字母小写就是bean的id。例如：UserController类对应的bean的id就是userController。
+> 默认情况  bean的id就是<font color='red'>类名首字母小写就是bean的id。例如：UserController类对应的bean的id就是userController。</font>
 >
 > 自定义bean的id
 >
@@ -1876,11 +1866,7 @@ public class CalculatorStaticProxy implements Calculator {
 }
 ```
 
-> 静态代理确实实现了解耦，但是由于代码都写死了，完全不具备任何的灵活性。就拿日志功能来
->
-> 说，将来其他地方也需要附加日志，那还得再声明更多个静态代理类，那就产生了大量重复的代
->
-> 码，日志功能还是分散的，没有统一管理。
+> 静态代理确实实现了解耦，但是由于代码都写死了，完全不具备任何的灵活性。就拿日志功能来说，将来其他地方也需要附加日志，那还得再声明更多个静态代理类，那就产生了大量重复的代码，日志功能还是分散的，没有统一管理。
 >
 > 提出进一步的需求：将日志功能集中到一个代理类中，将来有任何日志需求，都通过这一个代理
 >
@@ -2020,9 +2006,7 @@ Spring 的 AOP 技术可以通过切入点定位到特定的连接点。
 
 ![24](img\24.png)
 
-- 动态代理（InvocationHandler）：JDK原生的实现方式，需要被代理的目标类必须实现接口。因
-
-为这个技术要求**代理对象和目标对象实现同样的接口**（兄弟两个拜把子模式）。
+- 动态代理（InvocationHandler）：JDK原生的实现方式，<font color='red'>需要被代理的目标类必须实现接口</font>。因为这个技术要求**<font color='red'>代理对象和目标对象实现同样的接口</font>**（兄弟两个拜把子模式）。
 
 - cglib：通过**继承被代理的目标类**（认干爹模式）实现代理，所以不需要目标类实现接口。
 
@@ -2996,13 +2980,7 @@ public void checkout(Integer[] bookIds, Integer userId){
 
 修改BookServiceImpl中buyBook()上，注解@Transactional的propagation属性
 
-@Transactional(propagation = Propagation.REQUIRED)，默认情况，表示如果当前线程上有已经开
-
-启的事务可用，那么就在这个事务中运行。经过观察，购买图书的方法buyBook()在checkout()中被调
-
-用，checkout()上有事务注解，因此在此事务中执行。所购买的两本图书的价格为80和50，而用户的余额为100，因此在购买第二本图书时余额不足失败，导致整个checkout()回滚，即只要有一本书买不
-
-了，就都买不了
+@Transactional(propagation = Propagation.REQUIRED)，默认情况，表示如果当前线程上有已经开启的事务可用，那么就在这个事务中运行。经过观察，购买图书的方法buyBook()在checkout()中被调用，checkout()上有事务注解，因此在此事务中执行。所购买的两本图书的价格为80和50，而用户的余额为100，因此在购买第二本图书时余额不足失败，导致整个checkout()回滚，即只要有一本书买不了，就都买不了
 
 @Transactional(propagation = Propagation.REQUIRES_NEW)，表示不管当前线程上是否有已经开启的事务，都要开启新事务。同样的场景，每次购买图书都是在buyBook()的事务中执行，因此第一本图书购买成功，事务结束，第二本图书购买失败，只在第二次的buyBook()中回滚，购买第一本图书不受影响，即能买几本就买几本
 
